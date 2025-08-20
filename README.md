@@ -21,15 +21,33 @@ The framework includes **data preprocessing, portfolio optimization under SSD co
 ## 📂 Repository Structure
 
 ```text
-├── ssd_method.ipynb             # Notebook: SSD optimization demonstration
-├── backtesting_ssd.ipynb        # Notebook: backtesting analysis
-├── data_import.py               # Import market data
-├── data_clean.py                # Data cleaning and preparation
-├── strategy.py                  # SSD portfolio optimization logic
-├── backtest.py                  # Backtesting framework
+├── backtesting_ssd.ipynb        # Notebook: portfolio backtesting
+├── ssd_method.ipynb             # Notebook: SSD optimization demo
 ├── theory.pdf                   # Theoretical background on stochastic dominance
 ├── requirements.txt             # Python dependencies
-└── README.md                    # This file
+├── README.md                    # This file
+│
+└── src
+    ├── algorithms
+    │   └── strategy.py          # SSD portfolio optimization
+    │
+    ├── backtest
+    │   ├── __init__.py
+    │   └── backtest.py          # Backtesting engine
+    │
+    ├── datasource
+    │   ├── __init__.py
+    │   └── yahoodata.py         # Market data collection
+    │
+    ├── scenario
+    │   ├── __init__.py
+    │   ├── past_gen.py          # Historical scenario generator
+    │   └── scenario_gen.py      # Simulation-based scenario generator
+    │
+    └── utils
+        ├── __init__.py
+        ├── data_clean.py        # Data cleaning
+        └── data_import.py       # Data import
 ```
 
 ---
